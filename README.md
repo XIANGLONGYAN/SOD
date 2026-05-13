@@ -2,13 +2,17 @@
 
 <h2>SOD: Step-wise On-policy Distillation for<br>Small Language Model Agents</h2>
 
-</div>
-
-<p align="center">
-  <a href="https://arxiv.org/abs/xxxx.xxxxx">
+<p>
+  <a href="https://arxiv.org/abs/2605.07725">
     <img
       src="https://img.shields.io/badge/Paper-Arxiv-red?logo=arxiv&logoColor=red"
       alt="Paper on arXiv"
+    />
+  </a>
+  <a href="https://huggingface.co/collections/youngzhong/sod">
+    <img 
+        src="https://img.shields.io/badge/Models-SOD-blue?logo=huggingface&logoColor=yellow" 
+        alt="Models/SOD"
     />
   </a>
   <a href="https://huggingface.co/collections/Gen-Verse/open-agentrl-68eda4c05755ca5a8c663656">
@@ -18,6 +22,8 @@
     />
   </a>
 </p>
+
+</div>
 
 ## Introduction
 
@@ -41,6 +47,27 @@ Experiments on challenging math, science, and code benchmarks show that SOD achi
 <p align="center">
   <img src="assets/framework.png" width="100%">
 </p>
+
+## 📊 Main Results
+
+Performance comparison of the Qwen3 series on 4 benchmarks. We report average@32.
+
+| Params | Method | AIME 2024 | AIME 2025 | GPQA | LiveCodeBench | Average |
+|--------|--------|:---------:|:---------:|:----:|:-------------:|:-------:|
+| **0.6B** | Vanilla | 7.71 | 12.81 | 13.24 | 14.89 | 12.16 |
+| | SFT | 5.67 | 5.42 | 15.20 | 9.61 | 8.97 |
+| | GRPO | 4.06 | 4.90 | 20.38 | 15.95 | 11.32 |
+| | OPD | 16.82 | 22.95 | 17.76 | 22.65 | 20.04 |
+| | OPSD_gt | 12.63 | 17.04 | 17.32 | 16.73 | 15.93 |
+| | OPSD_hint | 9.77 | 14.12 | 15.98 | 12.65 | 13.13 |
+| | **SOD** | **20.84** | **26.13** | **22.19** | **27.72** | **24.22** |
+| **1.7B** | Vanilla | 9.90 | 8.96 | 26.80 | 22.73 | 17.10 |
+| | SFT | 26.77 | 22.40 | 29.85 | 24.63 | 25.91 |
+| | GRPO | 25.63 | 21.67 | 33.55 | 20.70 | 25.39 |
+| | OPD | 43.86 | 37.04 | 31.73 | 32.45 | 36.27 |
+| | OPSD_gt | 33.85 | 24.69 | 35.02 | 22.73 | 29.07 |
+| | OPSD_hint | 34.42 | 21.43 | 33.46 | 23.12 | 28.11 |
+| | **SOD** | **50.83** | **41.72** | **38.72** | **40.63** | **42.98** |
 
 ## 🚀 Get Started
 ### Environment Setup
@@ -126,9 +153,28 @@ bash examples/SOD/eval/run_eval_aime.sh
 
 You can observe average@32 / pass@32 / maj@32 metrics from your wandb project.
 
+## 🤗 Model Zoo
+
+If needed, you can download our distilled models directly:
+
+| Model | Link | Description |
+|-------|------|-------------|
+| SOD-0.6B | [🤗 HuggingFace](https://huggingface.co/youngzhong/SOD-0.6B) | SOD distilled from Qwen3-4B teacher |
+| SOD-1.7B | [🤗 HuggingFace](https://huggingface.co/youngzhong/SOD-1.7B) | SOD distilled from Qwen3-4B teacher |
+| SOD-GRPO_teacher-4B | [🤗 HuggingFace](https://huggingface.co/youngzhong/SOD-GRPO_teacher-4B) | GRPO-trained Qwen3-4B teacher model |
+
+All models are also available in our [HuggingFace Collection](https://huggingface.co/collections/youngzhong/sod).
+
 ## 📝 Citation
 
-Coming soon.
+```bibtex
+@article{zhong2026sod,
+      title={SOD: Step-wise On-policy Distillation for Small Language Model Agents}, 
+      author={Qiyong Zhong and Mao Zheng and Mingyang Song and Xin Lin and Jie Sun and Houcheng Jiang and Xiang Wang and Junfeng Fang},
+      journal={arXiv preprint arXiv:2605.07725},
+      year={2026}
+}
+```
 
 ## 🙏 Acknowledgements
 
