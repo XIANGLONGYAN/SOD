@@ -5,7 +5,7 @@
 <p>
   <a href="https://arxiv.org/abs/2605.07725">
     <img
-      src="https://img.shields.io/badge/Paper-Arxiv-red?logo=arxiv&logoColor=red"
+        src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoColor=red"
       alt="Paper on arXiv"
     />
   </a>
@@ -15,10 +15,22 @@
         alt="Models/SOD"
     />
   </a>
+  <a href="https://huggingface.co/papers/2605.07725">
+    <img 
+        src="https://img.shields.io/badge/Daily%20Paper-SOD-yellow?logo=huggingface&logoColor=yellow" 
+        alt="HuggingFace Daily Paper"
+    />
+  </a>
   <a href="https://huggingface.co/collections/Gen-Verse/open-agentrl-68eda4c05755ca5a8c663656">
     <img 
-        src="https://img.shields.io/badge/Datasets-Agent%20RL%20Datasets-orange?logo=huggingface&logoColor=yellow" 
-        alt="Datasets for Agent RL"
+        src="https://img.shields.io/badge/Datasets-SOD-orange?logo=huggingface&logoColor=yellow" 
+        alt="Datasets for SOD"
+    />
+  </a>
+  <a href="https://www.alphaxiv.org/abs/2605.07725">
+    <img 
+        src="https://img.shields.io/badge/alphaXiv-2605.07725-purple?logo=arxiv&logoColor=white"
+        alt="alphaXiv"
     />
   </a>
 </p>
@@ -169,10 +181,10 @@ All models are also available in our [HuggingFace Collection](https://huggingfac
 
 ```bibtex
 @article{zhong2026sod,
-      title={SOD: Step-wise On-policy Distillation for Small Language Model Agents}, 
-      author={Qiyong Zhong and Mao Zheng and Mingyang Song and Xin Lin and Jie Sun and Houcheng Jiang and Xiang Wang and Junfeng Fang},
-      journal={arXiv preprint arXiv:2605.07725},
-      year={2026}
+  title={SOD: Step-wise On-policy Distillation for Small Language Model Agents},
+  author={Zhong, Qiyong and Zheng, Mao and Song, Mingyang and Lin, Xin and Sun, Jie and Jiang, Houcheng and Wang, Xiang and Fang, Junfeng},
+  journal={arXiv preprint arXiv:2605.07725},
+  year={2026}
 }
 ```
 
