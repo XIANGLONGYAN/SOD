@@ -222,7 +222,7 @@ def compute_score(completion, test_cases, task=None, timeout=30, is_long_penalty
                     message = None
                     ## Add Sandbox Fusion API
                     metrics = check_correctness(
-                            sandbox_fusion_url="<your_sandbox_fusion_url>",
+                            sandbox_fusion_url="http://localhost:8080/run_code",
                             in_outs={'inputs':["prefix"],"outputs":["prefix"]},
                             generation=cur_solution,
                             timeout=timeout
@@ -288,7 +288,7 @@ def compute_score(completion, test_cases, task=None, timeout=30, is_long_penalty
                 
             # Add Sandbox Fusion API
             metrics = check_correctness(
-                sandbox_fusion_url = "<your_sandbox_fusion_url>",
+                sandbox_fusion_url = "http://localhost:8080/run_code",
                 in_outs=json.loads(json.dumps(test_cases)),
                 generation=solution,
                 timeout=timeout,
